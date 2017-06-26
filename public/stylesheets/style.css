@@ -1,0 +1,44 @@
+body {
+    font: 15px arial, sans-serif;
+    background-color: #d9d9d9;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#bodybox {
+    margin: auto;
+    max-width: 550px;
+    font: 15px arial, sans-serif;
+    background-color: white;
+    border: 1px solid;
+    padding: 20px 25px 25px;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 15px;
+}
+
+#chatborder {
+    background: url("/images/ebay_logo.png") no-repeat center ;
+    border: 3px solid;
+    margin: 20px;
+    padding: 10px 20px 15px 15px;
+    border-radius: 15px;
+}
+
+.chatlog {
+    font: 15px arial, sans-serif;
+}
+
+#chatbox {
+    font: 17px arial, sans-serif;
+    height: 22px;
+    width: 100%;
+}
+
+h1 {
+    margin: auto;
+}
+
+pre {
+    background-color: #f0f0f0;
+    margin-left: 20px;
+}
