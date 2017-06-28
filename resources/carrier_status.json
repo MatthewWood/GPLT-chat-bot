@@ -1,0 +1,16 @@
+{
+  "carriers": [
+    {
+      "name": "hermes",
+      "status": true
+    },
+    {
+      "name": "ups",
+      "status": true
+    },
+    {
+      "name": "collectplus",
+      "status": true
+    }
+  ]
+}

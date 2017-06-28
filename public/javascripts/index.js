@@ -12,12 +12,16 @@ function chatbotResponse(userMessage, callback) {
     var data = {
         message: userMessage
     };
-    $.post("chatbot/message", data, function (data, status) {
-        if (status === 'success') {
-            return callback(data);
-        }
-        return callback('Error from server.');
-    });
+    if (userMessage.includes('responsive')) {
+        return callback('No, but I am accessible!', true);
+    } else {
+        $.post("chatbot/message", data, function (data, status) {
+            if (status === 'success') {
+                return callback(data, false);
+            }
+            return callback('Error from server.', false);
+        });
+    }
 
 
 }
@@ -33,11 +37,13 @@ function newEntry() {
         messages.push('<b>You:</b> ' + userMessage);
         printMessages();
         //sets the variable botMessage in response to userMessage
-        chatbotResponse(userMessage, function (response) {
+        chatbotResponse(userMessage, function (response, speech) {
             //add the chatbot's name and message to the array messages
             messages.push('<b>' + botName + ':</b> ' + response);
             // says the message using the text to speech function written below
-            Speech(response);
+            if (speech) {
+                Speech(response);
+            }
             //outputs the last few array elements of messages to html
             printMessages();
         });

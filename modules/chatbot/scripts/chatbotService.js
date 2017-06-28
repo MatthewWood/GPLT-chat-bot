@@ -1,5 +1,8 @@
+var labelErrorsService = require('./labelErrorsService');
+var customerServiceTicketService = require('./customerServiceTicketService');
 var apiai = require('apiai');
 var processor = apiai('5f05b245897e45ae9d0e7e114a55719f');
+var mockHermesDown = false;
 
 const uuidv1 = require('uuid/v1');
 
@@ -14,7 +17,9 @@ module.exports.processMessage = function (req, res) {
 
     request.on('response', function (response) {
         console.log(response.result.fulfillment.speech);
-        return res.send(processAiResponse(response));
+        processAiResponse(response, function (returnText) {
+            return res.send(returnText);
+        });
     });
 
     request.on('error', function (error) {
@@ -26,17 +31,28 @@ module.exports.processMessage = function (req, res) {
     request.end();
 };
 
-var processAiResponse = function (aiResponse) {
+var processAiResponse = function (aiResponse, callback) {
     if (aiResponse.result.fulfillment.speech === '') {
         // TODO make this into normal foprloop
-        aiResponse.result.fulfillment.messages.forEach(function (responseMessage) {
-            if (responseMessage.type === 4) {
-                if (responseMessage.payload.problem !== '') {
-                    return responseMessage.payload.problem;
+        var responseMessages = aiResponse.result.fulfillment.messages;
+        for (var i = 0; i < responseMessages.length; i++) {
+            if (responseMessages[i].type === 4) {
+                switch (responseMessages[i].payload.problem) {
+                    case 'can not print label':
+                        var carrier = aiResponse.result.parameters.carrier ? aiResponse.result.parameters.carrier : 'none';
+                        labelErrorsService.investigate(mockHermesDown, carrier, function (returnText) {
+                            return callback(returnText);
+                        });
+                        break;
+                    case 'need to create a ticket' :
+                        customerServiceTicketService.createTicket(function (returnText) {
+                            return callback(returnText);
+                        });
+                        break;
                 }
             }
-        });
+        }
     } else {
-        return aiResponse.result.fulfillment.speech;
+        return callback(aiResponse.result.fulfillment.speech);
     }
 };
