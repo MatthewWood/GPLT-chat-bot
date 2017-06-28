@@ -2,7 +2,6 @@ var labelErrorsService = require('./labelErrorsService');
 var customerServiceTicketService = require('./customerServiceTicketService');
 var apiai = require('apiai');
 var processor = apiai('5f05b245897e45ae9d0e7e114a55719f');
-var mockHermesDown = false;
 
 const uuidv1 = require('uuid/v1');
 var sessionId = uuidv1();
@@ -32,26 +31,36 @@ module.exports.processMessage = function (req, res) {
 };
 
 var processAiResponse = function (aiResponse, callback) {
-    if (aiResponse.result.fulfillment.speech === '') {
-        var responseMessages = aiResponse.result.fulfillment.messages;
-        for (var i = 0; i < responseMessages.length; i++) {
-            if (responseMessages[i].type === 4) {
-                switch (responseMessages[i].payload.problem) {
-                    case 'can not print label':
-                        var carrier = aiResponse.result.parameters.carrier ? aiResponse.result.parameters.carrier : 'none';
-                        labelErrorsService.investigate(mockHermesDown, carrier, function (returnText) {
-                            return callback(returnText);
-                        });
-                        break;
-                    case 'need to create a ticket' :
-                        customerServiceTicketService.createTicket(function (returnText) {
-                            return callback(returnText);
-                        });
-                        break;
-                }
-            }
+    var trigger = getTriggerInstructions(aiResponse);
+    if (trigger) {
+        switch (trigger) {
+            case 'can not print label':
+                var carrier = aiResponse.result.parameters.carrier ? aiResponse.result.parameters.carrier : 'none';
+                labelErrorsService.investigate(carrier, function (returnText) {
+                    return callback(returnText);
+                });
+                break;
+            case 'need to create a ticket' :
+                var email = aiResponse.result.parameters.email;
+                var name = aiResponse.result.parameters.name;
+                var message = aiResponse.result.parameters.message;
+                customerServiceTicketService.createTicket(email, name, message, function (returnText) {
+                    return callback(returnText);
+                });
+                break;
         }
     } else {
         return callback(aiResponse.result.fulfillment.speech);
     }
 };
+
+var getTriggerInstructions = function (aiResponse) {
+    var responseMessages = aiResponse.result.fulfillment.messages;
+    for (var i = 0; i < responseMessages.length; i++) {
+        if (responseMessages[i].type === 4) {
+            return responseMessages[i].payload.trigger;
+        }
+    }
+
+    return null;
+}

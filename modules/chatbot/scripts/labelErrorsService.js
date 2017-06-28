@@ -4,23 +4,17 @@ var fs = require('fs');
 
 const TWENTY_FOUR_HOURS_IN_MS = 86400 * 1000;
 
-module.exports.investigate = function (mock, carrier, callback) {
+module.exports.investigate = function (carrier, callback) {
 
-    // TODO maybe make a settable config with carriers and status and go read it here first
-    // TODO can be controlled by devs because they might know before Scurri
     // lets first look at the config
     var carrierConfig = JSON.parse(fs.readFileSync('resources/carrier_status.json', 'utf8'));
     for (var i = 0; i < carrierConfig.carriers.length; i++) {
-        if (!carrierConfig.carriers[i].status) {
+        if (carrierConfig.carriers[i].name === carrier && !carrierConfig.carriers[i].status) {
             return callback(getCarrierErrorMessage(carrierConfig.carriers[i].name))
         }
     }
-    console.log(carrierConfig);
 
-    if (mock === true) {
-        return callback('There seems to be an ongoing issue with Hermes, please use another carrier or try again later.');
-    }
-
+    // config is ok, let's check Scurri for any incidents
     http.get('http://status.scurri.co.uk/history.atom', function (res) {
         var parser = new FeedMe(true);
         res.pipe(parser);
@@ -46,8 +40,7 @@ var processScurriFeed = function (jsonFeed, carrier, callback) {
         }
     }
 
-    // TODO if there is no recorded problem, we should direct them to creating a ticket
-    return callback('I AM TEMPORARY! ALSO ' + carrier.toUpperCase() + ' IS FINE LUL');
+    return callback('We can\'t see any issues with ' + carrier + '. If you would like to open a customer service ticket, please type \'create ticket\'.');
 };
 
 var isWithinDateRange = function (incidentDate) {

@@ -2,7 +2,7 @@
   "carriers": [
     {
       "name": "hermes",
-      "status": true
+      "status": false
     },
     {
       "name": "ups",
