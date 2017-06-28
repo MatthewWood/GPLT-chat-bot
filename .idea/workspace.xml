@@ -4,9 +4,7 @@
     <list default="true" id="f2242dd2-c544-4bfd-bcf7-c1fe874d95de" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/chatbot/scripts/chatbotService.js" afterPath="$PROJECT_DIR$/modules/chatbot/scripts/chatbotService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/index.js" afterPath="$PROJECT_DIR$/public/javascripts/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.hbs" afterPath="$PROJECT_DIR$/views/layout.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/chatbot/scripts/labelErrorsService.js" afterPath="$PROJECT_DIR$/modules/chatbot/scripts/labelErrorsService.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,20 +19,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.hbs">
+      <file leaf-file-name="carrier_status.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/carrier_status.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#86#92#1#HTML" expanded="true" />
-                <element signature="e#138#144#1#HTML" expanded="true" />
-                <element signature="e#190#196#1#HTML" expanded="true" />
-                <element signature="e#242#248#1#HTML" expanded="true" />
-                <element signature="e#294#300#1#HTML" expanded="true" />
-                <element signature="e#346#352#1#HTML" expanded="true" />
-                <element signature="e#398#404#1#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,21 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chatbotService.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chatbotService.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/chatbot/scripts/chatbotService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="carrier_status.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/carrier_status.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="456">
+              <caret line="34" column="54" lean-forward="false" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -82,8 +62,8 @@
       <file leaf-file-name="labelErrorsService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/chatbot/scripts/labelErrorsService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="49" />
+            <state relative-caret-position="114">
+              <caret line="14" column="78" lean-forward="true" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -150,10 +130,10 @@
         <option value="$PROJECT_DIR$/routes/chatbot.js" />
         <option value="$PROJECT_DIR$/views/layout.hbs" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
-        <option value="$PROJECT_DIR$/modules/chatbot/scripts/labelErrorsService.js" />
         <option value="$PROJECT_DIR$/modules/chatbot/scripts/customerServiceTicketService.js" />
-        <option value="$PROJECT_DIR$/modules/chatbot/scripts/chatbotService.js" />
+        <option value="$PROJECT_DIR$/modules/chatbot/scripts/labelErrorsService.js" />
         <option value="$PROJECT_DIR$/resources/carrier_status.json" />
+        <option value="$PROJECT_DIR$/modules/chatbot/scripts/chatbotService.js" />
       </list>
     </option>
   </component>
@@ -213,6 +193,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eBae" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eBae" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -390,12 +384,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1498478217035</updated>
-      <workItem from="1498478218311" duration="32807000" />
+      <workItem from="1498478218311" duration="36934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32807000" />
+    <option name="totallyTimeSpent" value="36934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-436" width="1920" height="1057" extended-state="6" />
@@ -405,12 +399,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38575667" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38562754" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39985162" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979756" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -428,7 +422,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -470,22 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#86#92#1#HTML" expanded="true" />
-            <element signature="e#138#144#1#HTML" expanded="true" />
-            <element signature="e#190#196#1#HTML" expanded="true" />
-            <element signature="e#242#248#1#HTML" expanded="true" />
-            <element signature="e#294#300#1#HTML" expanded="true" />
-            <element signature="e#346#352#1#HTML" expanded="true" />
-            <element signature="e#398#404#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -502,26 +480,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/chatbot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="210" column="0" lean-forward="false" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -534,26 +496,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/6.9.3/core-modules/fs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="493" column="40" lean-forward="false" selection-start-line="493" selection-start-column="33" selection-end-line="493" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/chatbot/scripts/labelErrorsService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="49" />
+        <state relative-caret-position="114">
+          <caret line="14" column="78" lean-forward="true" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#86#92#1#HTML" expanded="true" />
+            <element signature="e#138#144#1#HTML" expanded="true" />
+            <element signature="e#190#196#1#HTML" expanded="true" />
+            <element signature="e#242#248#1#HTML" expanded="true" />
+            <element signature="e#294#300#1#HTML" expanded="true" />
+            <element signature="e#346#352#1#HTML" expanded="true" />
+            <element signature="e#398#404#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/carrier_status.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/chatbot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/chatbot/scripts/chatbotService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/carrier_status.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="456">
+          <caret line="34" column="54" lean-forward="false" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
           <folding />
         </state>
       </provider>

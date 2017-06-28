@@ -5,12 +5,12 @@ var processor = apiai('5f05b245897e45ae9d0e7e114a55719f');
 var mockHermesDown = false;
 
 const uuidv1 = require('uuid/v1');
+var sessionId = uuidv1();
 
 module.exports.processMessage = function (req, res) {
 
     var message = req.body.message;
 
-    var sessionId = uuidv1();
     var request = processor.textRequest(message, {
         sessionId: sessionId
     });
@@ -33,7 +33,6 @@ module.exports.processMessage = function (req, res) {
 
 var processAiResponse = function (aiResponse, callback) {
     if (aiResponse.result.fulfillment.speech === '') {
-        // TODO make this into normal foprloop
         var responseMessages = aiResponse.result.fulfillment.messages;
         for (var i = 0; i < responseMessages.length; i++) {
             if (responseMessages[i].type === 4) {
