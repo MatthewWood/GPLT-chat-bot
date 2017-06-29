@@ -17,14 +17,14 @@ module.exports.processMessage = function (req, res) {
     request.on('response', function (response) {
         console.log(response.result.fulfillment.speech);
         processAiResponse(response, function (returnText) {
-            return res.send(returnText);
+            return res.send({answer: returnText});
         });
     });
 
     request.on('error', function (error) {
         var date = new Date();
         console.log(date.toDateString() + ': ' + JSON.stringify(error));
-        return res.send(date.toDateString() + ': ' + 'Error from APIAI!');
+        return res.send({answer: date.toDateString() + ': ' + 'Error from APIAI!'});
     });
 
     request.end();

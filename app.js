@@ -1,3 +1,4 @@
+var cors = require('cors');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -9,6 +10,12 @@ var index = require('./routes/index');
 var chatbot = require('./routes/chatbot');
 
 var app = express();
+
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, srt, Content-Type, Accept");
+    next();
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
